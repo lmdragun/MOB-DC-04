@@ -18,31 +18,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHb-Cn-5L5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-404" y="389"/>
+            <point key="canvasLocation" x="-404" y="367"/>
         </scene>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NavControllerPractice" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <button key="view" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qkv-uR-H7g">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btf-Pd-UDz">
-                                <rect key="frame" x="285" y="176" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="v6b-8B-ith" kind="show" id="AGJ-tS-BuB"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="NTb-a9-4XL"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Go to Second Scene"/>
+                        <connections>
+                            <segue destination="v6b-8B-ith" kind="show" id="gvJ-l3-CSl"/>
+                        </connections>
+                    </button>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Home" id="vuD-Gb-PF2">
+                        <barButtonItem key="rightBarButtonItem" title="2nd Page" id="j2A-MA-BhT">
+                            <connections>
+                                <segue destination="v6b-8B-ith" kind="show" id="dfK-hi-6do"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,19 +57,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Second Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6E-PM-Xsl">
-                                <rect key="frame" x="120" y="148" width="101" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHX-No-e7m">
+                                <rect key="frame" x="229" y="250" width="124" height="30"/>
+                                <state key="normal" title="Go to Third Scene"/>
+                                <connections>
+                                    <segue destination="Ugi-CB-EPp" kind="presentation" id="NV7-Ux-sfd"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XZL-SR-SyY">
+                                <rect key="frame" x="0.0" y="26" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Second Scene" id="HiB-S8-lkM"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="c1u-uN-vVY"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oy3-s3-TJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989" y="367"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Cp5-ci-Vjl">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3b1-i4-ref" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Ugi-CB-EPp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kXf-Em-d45"/>
+                        <viewControllerLayoutGuide type="bottom" id="JIX-VJ-dok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Faw-58-0DN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Third Scene" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ur-eJ-cam">
+                                <rect key="frame" x="244" y="213" width="92" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gO2-wD-OTl">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oy3-s3-TJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="933" y="389"/>
+            <point key="canvasLocation" x="989" y="1125"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gvJ-l3-CSl"/>
+    </inferredMetricsTieBreakers>
 </document>
