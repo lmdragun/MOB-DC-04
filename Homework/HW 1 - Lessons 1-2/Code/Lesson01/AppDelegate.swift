@@ -1,9 +1,8 @@
 //
 //  AppDelegate.swift
-//  homework01
+//  Lesson01
 //
-//  Created by Lindsey Dragun on 10/4/15.
-//  Copyright © 2015 Lindsey Dragun. All rights reserved.
+//  Copyright (c) 2014 General Assembly. All rights reserved.
 //
 
 import UIKit
