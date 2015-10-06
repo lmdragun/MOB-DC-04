@@ -24,6 +24,7 @@
 		90FE0D321BBCAFA200904856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90FE0D341BBCAFA200904856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90FE0D3A1BBCB0D400904856 /* jumppic300.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jumppic300.png; path = ../../../../../../../jumppic300.png; sourceTree = "<group>"; };
+		90FE0D3D1BBCB9A600904856 /* helloPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = helloPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 				90FE0D2F1BBCAFA200904856 /* Assets.xcassets */,
 				90FE0D311BBCAFA200904856 /* LaunchScreen.storyboard */,
 				90FE0D341BBCAFA200904856 /* Info.plist */,
+				90FE0D3D1BBCB9A600904856 /* helloPlayground.playground */,
 			);
 			path = NewBioExercise;
 			sourceTree = "<group>";
