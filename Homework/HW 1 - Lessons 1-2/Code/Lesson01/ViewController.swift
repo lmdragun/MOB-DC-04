@@ -20,6 +20,5 @@ class ViewController: UIViewController {
     }
 
 
-    @IBOutlet weak var username_entry: UITextField!
 }
 
