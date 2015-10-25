@@ -9,6 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var cardArray = [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10]
+    var playerCardArray = [Int]()
+    
+    @IBOutlet weak var playerCards: UILabel!
+    @IBOutlet weak var dealersTotal: UILabel!
+    
     // BlackJack game: Create a a game of Blackjack
     // ************* Baseline requirements:
     // ** Set up Player class and CardGame class in their respective provided files. Follow the protocol rules for the CardGame class.
@@ -22,13 +29,38 @@ class ViewController: UIViewController {
     // Bonus: Create a button to play a new game.
     // Bonus 2: Player can start with a pool of money (selected through a text field) and make bets for each game (through a text field again). If player reaches <= 0, don't allow them to play any more games.
     // Bonus 3: When handing out cards, display the actual value to the user. If the card is an Ace, let the user select either 1 or 11.
+    func randomInt(min: Int, max: Int) -> Int {
+        
+        let newCard = min + Int(arc4random_uniform(UInt32(max - min + 1)))
+        let newCardValue = cardArray[newCard]
+        playerCardArray.append(newCardValue)
+        
+        cardArray.removeAtIndex(newCard)
+        
+        return newCard
+    }
     
+    func findDealersTotal(min: Int, max: Int) {
+        let dealersCards = min + Int(arc4random_uniform(UInt32(max - min + 1)))
+        self.dealersTotal.text = "\(dealersCards)"
+    }
     
     @IBOutlet weak var redBox: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        findDealersTotal(12, max: 21)
     }
 
+
+    @IBAction func playerRequestsCardAction(sender: AnyObject) {
+        let newPlayerCard = randomInt(0, max:cardArray.count)
+        let playerCardSum = playerCardArray.reduce(0, combine: +)
+        if playerCardSum < 22 {
+        self.playerCards.text = "\(playerCardArray)"
+            } else {
+            self.playerCards.text = "You've lost!"
+        }
+    }
 
 }
 
