@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     // Bonus: Create a button to play a new game.
     // Bonus 2: Player can start with a pool of money (selected through a text field) and make bets for each game (through a text field again). If player reaches <= 0, don't allow them to play any more games.
     // Bonus 3: When handing out cards, display the actual value to the user. If the card is an Ace, let the user select either 1 or 11.
-    func randomInt(min: Int, max: Int) {
+    func findRandomPlayerCard(min: Int, max: Int) {
         
         let newCard = min + Int(arc4random_uniform(UInt32(max - min + 1)))
         let newCardValue = cardArray[newCard]
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func playerRequestsCardAction(sender: AnyObject) {
-        let newPlayerCard = randomInt(0, max:cardArray.count)
+        findRandomPlayerCard(0, max:cardArray.count)
         let playerCardSum = playerCardArray.reduce(0, combine: +)
         var cards = ""
         for card in playerCardArray {
